@@ -30,7 +30,6 @@ int main(){
                     strongH++;
                     guessV.at(i).at(j) = '.';
                     codeCopy[j] = '.';
-                    continue;
                 }
             }
             for(int j = 0; j < code.size(); j++){
