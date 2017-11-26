@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
     int n;
-    map<string, int> db;  //A map sorts its key internally
+    map<string, int> db;  //A map sorts its keys internally
     string line, country;
     cin >> n;
     getline(cin, line);
