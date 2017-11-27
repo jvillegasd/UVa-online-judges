@@ -6,7 +6,7 @@
 
 using namespace std;
 
-string toLowerAndSort(string word){
+string toLowerAndSort(string word){ //Aplicar lowercase y organizar la palabra para evitar O(n!)
     for(int i = 0; i < word.size(); i++) if(word[i] >= 'A' && word[i] <= 'Z') word[i] += 32;
     sort(word.begin(), word.end());
     return word;
@@ -22,9 +22,8 @@ int main(){
         dic.push_back(line);
         anagrams[toLowerAndSort(line)] += 1;
     }
-
     sort(dic.begin(), dic.end());
-    for(int i = 0; i < dic.size(); i++){
+    for(int i = 0; i < dic.size(); i++){ //Anagrama relativo == palabra que no tenga permutacion en el dic
         if(anagrams[toLowerAndSort(dic[i])] == 1) printf("%s\n", dic[i].c_str());
     }
     return 0;
