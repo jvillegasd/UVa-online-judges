@@ -45,7 +45,6 @@ int main(){
                 }
                 if (isntIgnored(word))
                 {
-                    word = toLower(word);
                     string auxLine = line;
                     word = toUpper(word);
                     auxLine = auxLine.replace(i - word.size(), word.size(), word);
