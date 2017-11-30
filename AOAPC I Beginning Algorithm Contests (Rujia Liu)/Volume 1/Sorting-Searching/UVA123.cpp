@@ -43,8 +43,7 @@ int main(){
                     word += line[i];
                     i++;
                 }
-                if (isntIgnored(word))
-                {
+                if (isntIgnored(word)){
                     string auxLine = line;
                     word = toUpper(word);
                     auxLine = auxLine.replace(i - word.size(), word.size(), word);
