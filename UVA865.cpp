@@ -7,7 +7,7 @@ int main(){
     int tc;
     scanf("%d", &tc);
     getchar();
-	  getchar();
+	getchar();
     while(tc-- > 0){
         gets(alpha);
         gets(sust);
