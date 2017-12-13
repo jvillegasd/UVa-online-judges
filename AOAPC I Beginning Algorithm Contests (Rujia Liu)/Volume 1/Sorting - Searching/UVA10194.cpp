@@ -11,7 +11,7 @@ struct team{  //Usar struct para contener los datos
     char cmpName[40]; //Para poder comparar lexicograficamente
     void init(){
       points = 0; games = 0; wins = 0; ties = 0; loses = 0; GD = 0; GS = 0; GA = 0;
-      name = "";;
+      name = "";
     }
     void game(int goals1, int goals2){
         if(goals1 > goals2){
