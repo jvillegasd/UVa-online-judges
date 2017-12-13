@@ -47,5 +47,7 @@ int main(){
     La estrategia es tratar el circulo como un grafo y cada numero como un nodo, de esta manera se usaria el DFS para
     poder dar con la solucion, cuando la recursividad llegue al caso base se imprime el vector de respuesta, la 
     recursividad hace todo el trabajo, pero para que pueda imprimir en orden anti horario, se tiene que cambiar el 
-    estado de visitado a falso luego del llamado recursivo, esto es para que se pueda volver a reutilizar el nodo.
+    estado de visitado a falso luego del llamado recursivo, esto es para que se pueda volver a reutilizar el nodo. En
+    otras palabras, no hay que dejarse confundir con que hay que imprimir ya sea en orden horario o no, realmente se 
+    imprime todas las posibilidades.
 */
