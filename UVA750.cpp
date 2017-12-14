@@ -9,9 +9,9 @@ void backtracking(int currentCol, int colI, int col[15], bool row[15], bool dig1
         backtracking(currentCol + 1, colI, col, row, dig1, dig2);
     }else if(currentCol == 9){
         sol++;
-        printf( "%2d     ", sol);
-        for(int i = 1 ; i <= 8 ; i++ ) printf( " %d", col[i]);
-        printf( "\n" );
+        printf("%2d     ", sol);
+        for(int i = 1 ; i <= 8 ; i++ ) printf(" %d", col[i]);
+        printf("\n");
     }else{
         for(int i = 1; i <= 8; i++){
             if(!row[i] && !dig1[currentCol + i] && !dig2[i - currentCol + 8]){
@@ -37,8 +37,8 @@ int main(){
         row[rowI] = true;
         dig1[colI + rowI] = true;
         dig2[rowI - colI + 8] = true;
-        printf( "SOLN       COLUMN\n");
-        printf( " #      1 2 3 4 5 6 7 8\n\n" );
+        printf("SOLN       COLUMN\n");
+        printf(" #      1 2 3 4 5 6 7 8\n\n");
         sol = 0;
         backtracking(1, colI, col, row, dig1, dig2);
     }
