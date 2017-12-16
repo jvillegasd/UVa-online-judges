@@ -14,5 +14,5 @@ int main(){
 /*
     La estrategia es usar algo de algebra lineal (matrices particionadas), cada sonar maneja un rango de una matriz 3x3, 
     por lo tanto, lo que nos pide es cuantas matrices particionadas de 3x3 contiene la matriz que representa el rio, 
-    eso se obtiene dividiendo la matriz original entre 3.
+    eso se obtiene dividiendo el numero de columnas entre 3, el numero de filas entre 3 y luego multiplicarlos.
 */
