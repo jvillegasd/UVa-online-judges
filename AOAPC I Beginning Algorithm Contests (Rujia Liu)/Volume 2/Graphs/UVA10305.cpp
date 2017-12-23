@@ -42,9 +42,9 @@ int main(){
 		if(n == 0 && m == 0) break;
 		sortedG.clear();
 		for(int i = 1; i <= m; i++){
-			cin >> in >> out;
-			matrizA[in][out] = out;
-			inDegree[out] = inDegree[out] + 1; //Calculate in-edges of out-vertex
+			cin >> out >> in;
+			matrizA[out][in] = in;
+			inDegree[in] = inDegree[in] + 1; //Calculate in-edges of out-vertex
 		}
 		topologicalSort(n);
 		for(int i = 0; i < n; i++){
