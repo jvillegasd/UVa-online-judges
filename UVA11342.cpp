@@ -10,7 +10,7 @@ int main(){
     memset(squares, 0, sizeof(squares)); //Para no usar 3 for-loop para inicializarlo
     for(int i = 0; pow(i, 2) <= 50000; i++){
         for(int j = 0; pow(j, 2) <= 50000; j++){
-            for(int k = 0; pow(j, 2) <= 50000; k++){
+            for(int k = 0; pow(k, 2) <= 50000; k++){
                 int tentativeAns = pow(i, 2) + pow(j, 2) + pow(k, 2);
                 if(tentativeAns > 50000) break;
                 if(squares[tentativeAns][3] != 0) continue;
