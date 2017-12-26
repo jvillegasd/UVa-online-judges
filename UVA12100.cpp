@@ -17,21 +17,21 @@ int main(){
     while(tc--){
         scanf("%d %d", &n, &m);
         queue<pair<int, bool>> cola;
-        vector<int> printPriority;
+        vector<int> priorityPrint;
         for(int i = 0; i < n; i++){
             cin >> priority;
             if(i == m) cola.push(make_pair(priority, true));
             else cola.push(make_pair(priority, false));
-            printPriority.push_back(priority);
+            priorityPrint.push_back(priority);
         }
         time = 0;
         indexPP = 0;
-        sort(printPriority.begin(), printPriority.end(), cmp);
+        sort(priorityPrint.begin(), priorityPrint.end(), cmp);
         while(!cola.empty()){
             int prior = cola.front().first;
             bool myJob = cola.front().second;
             cola.pop();
-            if(prior == printPriority[indexPP]){
+            if(prior == priorityPrint[indexPP]){
                 time++;
                 if(myJob) break;
                 indexPP++;
