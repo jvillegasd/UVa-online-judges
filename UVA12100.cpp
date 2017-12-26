@@ -2,7 +2,6 @@
 #include <queue>
 #include <vector>
 #include <algorithm>
-#include <iostream>
 
 using namespace std;
 
@@ -19,7 +18,7 @@ int main(){
         queue<pair<int, bool>> cola;
         vector<int> priorityPrint;
         for(int i = 0; i < n; i++){
-            cin >> priority;
+            scanf("%d", &priority);
             if(i == m) cola.push(make_pair(priority, true));
             else cola.push(make_pair(priority, false));
             priorityPrint.push_back(priority);
