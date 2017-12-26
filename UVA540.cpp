@@ -44,5 +44,5 @@ int main(){
     llegaron, ellos serian los lideres y la otra para representar la queue de ese equipo (esta seria un vector de queue) 
     y el map para saber a que team pertenece cada persona. Tarde mucho para llegar a esta solucion ya que la primera 
     solucion trabajaba con un vector y una queue que practicamente realizaba lo mismo, ya que con el vector simulaba 
-    una queue sin darme cuenta, tuve que cambiarla debido a que UVA mandaba RTE.
+    una queue sin darme cuenta, demore tratando de optimizarlo pero tuve que cambiarlo debido a que UVA mandaba RTE.
 */
