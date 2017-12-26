@@ -16,11 +16,12 @@ int main(){
     scanf("%d", &tc);
     while(tc--){
         scanf("%d %d", &n, &m);
-        queue<pair<int, int>> cola;
+        queue<pair<int, bool>> cola;
         vector<int> printPriority;
         for(int i = 0; i < n; i++){
             cin >> priority;
-            cola.push(make_pair(priority, i));
+            if(i == m) cola.push(make_pair(priority, true));
+            else cola.push(make_pair(priority, false));
             printPriority.push_back(priority);
         }
         time = 0;
@@ -28,24 +29,20 @@ int main(){
         sort(printPriority.begin(), printPriority.end(), cmp);
         while(!cola.empty()){
             int prior = cola.front().first;
-            int index = cola.front().second;
+            bool myJob = cola.front().second;
             cola.pop();
             if(prior == printPriority[indexPP]){
                 time++;
-                if(index == m) break;
+                if(myJob) break;
                 indexPP++;
-            }else cola.push(make_pair(prior, index));
+            }else cola.push(make_pair(prior, myJob));
         }
         printf("%d\n", time);
     }
     return 0;
 }
 /*
-    La estrategia es seguir al pie de la letra lo que te piden, para facilitarme el trabajo use un vector y una queue,
-    el vector me tiene organizado las prioridades y con la queue pues simulo normalmente la queue, para la queue tuve
-    que instancearla con pair para que a cada prioridad le guarde su indice, esto es para saber cuando tengo que parar.
-    Llegue a esta solucion porque intente hacer este problema usando estas estructura de manera separada, primero
-    como era problema de queue, entonces use una queue pero al razonar bien entendi que practicamente se podria
-    resolver organizando el vector pero tenia que tener en cuenta donde quedaba en indice de "my job" y eso no lo
-    pude controlar asi que lo hice de esta manera.
+    La estrategia es usar un vector y una queue, el vector me tiene organizado las prioridades y en la queue guardo
+    las prioridades tambien, esta a su vez la inicializo con pair para guardar un booleano a cada prioridad y asi
+    identificar "my job". El vector lo organizo de la mayor prioridad a la menor.
 */
