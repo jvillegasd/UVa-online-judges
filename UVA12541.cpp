@@ -31,5 +31,5 @@ int main(){
 }
 /*
     La estrategia a usar es un tuple y crear un metodo custom para ordenar el vector donde tengo las fechas de
-    nacimiento. Reflexion: Gracias a este problema pude aprender algo nuevo de C++ que son los tuple.
+    nacimiento. Aprendizaje: Gracias a este problema pude aprender algo nuevo de C++ que son los tuple.
 */
