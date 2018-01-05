@@ -28,7 +28,7 @@ int main(){
 
     -) Para hallar el patron de las figuras de diferente dimesion (rectangulos, GeeksforGeeks):
         Ejemplo usado: En una cuadricula 1x1 hay 1 rectangulo de 1x1 (cuadrado), bien, si ahora usamos una de 2x1 
-        habrian 2 rectangulos 1x1(cuadrados) y uno 2x1 que es igualo 2 + 1 = 3, ahora si colocamos uno 3x1 seria 
+        habrian 2 rectangulos 1x1(cuadrados) y uno 2x1 que es igual a 2 + 1 = 3, ahora si colocamos uno 3x1 seria 
         3 + 2 + 1 = 6, vemos que se comporta como numeros triangulares para Nx1, entonces para cualquier dimension 
         seria: R[i] = pow(i * (i + 1) / 2, dimension) - C[i] (debido a que cuenta tambien los cuadrados).
 */
