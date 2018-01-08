@@ -4,14 +4,14 @@
 using namespace std;
 
 int main(){
-    int year, k, n, numM;
+    int year, exp, n, bit;
     double num;
     while(scanf("%d", &year) && year != 0){
         num = 0;
-        k = (year - 1960) / 10 + 2;
-        numM = pow(2, k);
+        exp = (year - 1960) / 10 + 2;
+        bit = pow(2, exp);
         n = 0;
-        while(num < numM){
+        while(num < bit){
             n++;
             num+= log2(n);
         }
@@ -21,8 +21,7 @@ int main(){
     return 0;
 }
 /*
-    El numero mas grande es 2^k donde "k" son los bits del pc, para saber el numero mas grande que puede tener
-    la pc (del problema): numM = 2^(2+[(year - 1960)/10]). Teniendo en cuenta que 2^k > n! (solo piden que sea uInt),
-    hacemos algo de algebra quedaria k > log2(n!) y si re-expresamos el factorial: k > log2(n)+log2(n-1)+...+log2(1),
-    como sabemos que 2^k > k, entonces 2^k > log2(n)+log2(n-1)+...+log2(1) (Se hace esto para hacer menos calculo).
+    El numero mas grande es 2^k donde "k" es el numero de bits, en este ejercicio k = 2^[(year-1960)/10]+2. Del
+    ejercicio tenemos que 2^k > n!, entonces, aligerando calculos la condicion quedaria asi: 
+    k > log2(n) + log2(n-1) + ... + log2(1).
 */
