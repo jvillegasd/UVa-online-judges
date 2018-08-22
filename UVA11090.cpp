@@ -25,7 +25,7 @@ bool DFS(int u, double avg){
 }
 
 bool negativeCycle(double avg){
-  for(int i = 1; i <= n; i++) dist[i] = 0;
+  memset(dist, 0, n);
   memset(recStack, false, sizeof(recStack));
   for(int i = 1; i <= n; i++) if(DFS(i, avg)) return true;
   return false;
