@@ -17,8 +17,7 @@ bool DFS(int u, double avg){
     double w = p.second;
     if(dist[v] > dist[u] + w - avg){
       dist[v] = dist[u] + w - avg;
-      if(recStack[v]) return true;
-      if(DFS(v, avg)) return true;
+      if(recStack[v] || DFS(v, avg)) return true;
     }
   }
   recStack[u] = false;
