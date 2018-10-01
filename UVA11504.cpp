@@ -4,7 +4,6 @@ using namespace std;
 
 vector<int> graph[150000];
 stack<int> scc;
-int inDegree[150000];
 bool visited[150000];
 
 void SCC_DFS(int u){
@@ -32,8 +31,7 @@ int main(){
         for(int i = 0; i <= n; i++) graph[i].clear();
         knock = 0;
         memset(visited, false, sizeof(visited));
-        memset(inDegree, 0, sizeof(inDegree));
-        for(int i = 0; i < m; i++) scanf("%d %d", &u, &v), graph[u].push_back(v), inDegree[v]++;
+        for(int i = 0; i < m; i++) scanf("%d %d", &u, &v), graph[u].push_back(v);
         for(int i = 1; i <= n; i++) if(!visited[i]) SCC_DFS(i);
         memset(visited, false, sizeof(visited));
         while(!scc.empty()){
