@@ -1,3 +1,7 @@
+/**
+* 100 - The 3n + 1 problem
+*/
+
 #include <iostream>
 #include <algorithm>
 
@@ -25,3 +29,13 @@ int main(){
     }
     return 0;
 }
+
+/**
+
+Sample Input
+1 10
+100 200
+201 210
+900 1000
+
+*/
