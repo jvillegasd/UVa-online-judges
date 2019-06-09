@@ -43,10 +43,10 @@ int binsearch(int n, lli arr[], lli sum){
 void merge(int a[], int l, int m, int r){
     int i = l, j = m+1, bsize = 0, cnt = 0, b[1000100];
     while(i<=m && j<=r){
-        if(a[i]<=a[j]) b[bsize++]=a[i++], ans+=cnt;
-        else b[bsize++]=a[j++], cnt++;
+        if(a[i]<=a[j]) b[bsize++]=a[i++];
+        else b[bsize++]=a[j++], ans+=(m-i+1);
     }
-    while(i<=m) b[bsize++]=a[i++], ans+=cnt;
+    while(i<=m) b[bsize++]=a[i++];
     while(j<=r) b[bsize++]=a[j++];
     for(int k = 0; k < bsize; k++) a[l+k] = b[k];
 }
