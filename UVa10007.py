@@ -10,8 +10,8 @@ def c(n, k):
     if k>n-k: k=n-k;
     for i in range(k): 
         ans*=(n-i)
-        ans//=(i+1);
-    return ans;
+        ans//=(i+1)
+    return ans
 
 fact=[1]
 for i in range(1, 310*3): fact.append(i*fact[-1])
