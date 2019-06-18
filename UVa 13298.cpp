@@ -95,9 +95,9 @@ int main(){
         if(n<=k) printf("%lld\n", bc[n]);
         else if(k==1) printf("1\n");
         else{
-            trans = mPow(trans, n-1);
+            trans = mPow(trans, n-k+1);
             sum = 0;
-            for(int i = 0; i < k; i++) sum+=(trans.m[k-2][i]*bc[k-i-1])%MOD, sum%=MOD;
+            for(int i = 0; i < k; i++) sum+=(trans.m[0][i]*bc[k-i-1])%MOD, sum%=MOD;
             printf("%lld\n", sum);
         }
     }
