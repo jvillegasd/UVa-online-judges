@@ -93,7 +93,6 @@ int main(){
             }
         }
         if(n<=k) printf("%lld\n", bc[n]);
-        else if(k==1) printf("1\n");
         else{
             trans = mPow(trans, n-k+1);
             sum = 0;
